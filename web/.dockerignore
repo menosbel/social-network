@@ -1,0 +1,7 @@
+**/dist
+**/.git
+**/.gitignore
+**/.idea
+**/.dockerignore
+**/Dockerfile
+**/node_modules

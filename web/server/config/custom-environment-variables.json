@@ -1,0 +1,6 @@
+{
+  "port": "PORT",
+  "public": {
+    "apiBaseUrl": "API_BASE_URL"
+  }
+}

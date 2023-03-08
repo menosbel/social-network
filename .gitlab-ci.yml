@@ -1,0 +1,14 @@
+image: docker:stable
+variables:
+  DOCKER_DRIVER: overlay2
+services:
+  - docker:19.03.1-dind
+
+stages:
+  - test
+  - build
+  - deploy
+
+include:
+  - local: '/api/.gitlab-ci.yml'
+  - local: '/web/.gitlab-ci.yml'

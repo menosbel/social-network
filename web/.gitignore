@@ -1,0 +1,29 @@
+# node.js
+#
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Jest
+#
+.jest/
+coverage/
+
+### Linux ###
+*~
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+
+# Folder config file
+[Dd]esktop.ini
+
+.cache/
+.env

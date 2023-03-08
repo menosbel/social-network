@@ -1,0 +1,17 @@
+{
+  "name": "@social-network/jest-config",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@babel/core": "^7.14.6",
+    "@types/jest": "^26.0.24",
+    "babel-jest": "^27.0.6",
+    "jest": "^27.0.6",
+    "jest-extended": "^0.11.5",
+    "jest-transform-stub": "^2.0.0",
+    "jest-watch-typeahead": "^0.6.4",
+    "ts-jest": "^27.0.3",
+    "ts-mockito": "^2.6.1",
+    "typescript": "^4.3.5"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "social-network",
+  "private": true,
+  "scripts": {
+    "start": "yarn concurrently -n client,server -c bgBlue.white,bgGreen.white \"yarn workspace @social-network/web-client start\" \"yarn workspace @social-network/web-server start:watch\"",
+    "test": "yarn workspace @social-network/web-client test && yarn workspace @social-network/web-server test",
+    "lint": "yarn workspace @social-network/web-client lint && yarn workspace @social-network/web-server lint",
+    "check-all": "yarn workspace @social-network/web-client check-all && yarn workspace @social-network/web-server check-all"
+  },
+  "dependencies": {
+    "concurrently": "^5.3.0"
+  },
+  "workspaces": {
+    "packages": [
+      "client",
+      "server",
+      "shared/*"
+    ]
+  }
+}

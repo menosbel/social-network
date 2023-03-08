@@ -1,0 +1,13 @@
+{
+  "extends": "../shared/base_tsconfig.json",
+  "compilerOptions": {
+    "target": "es6",
+    "outDir": "dist",
+    "module": "commonjs",
+    "noImplicitReturns": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "removeComments": true
+  },
+  "include": ["src/**/*.ts"]
+}

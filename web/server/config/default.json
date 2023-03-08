@@ -1,0 +1,8 @@
+{
+  "port": 3000,
+  "apiBaseUrl": "",
+  "logging": true,
+  "public": {
+    "apiBaseUrl": "/api"
+  }
+}

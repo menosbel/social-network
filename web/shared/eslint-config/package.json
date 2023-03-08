@@ -1,0 +1,19 @@
+{
+  "name": "@social-network/eslint-config",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@babel/core": "^7.14.6",
+    "@typescript-eslint/eslint-plugin": "^4.28.3",
+    "@typescript-eslint/parser": "^4.28.3",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.30.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jest": "^24.3.6",
+    "typescript": "^4.3.5"
+  },
+  "eslintConfig": {},
+  "devDependencies": {
+    "eslint-plugin-import-quotes": "^0.0.1"
+  }
+}

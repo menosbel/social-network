@@ -1,0 +1,40 @@
+web:test:
+  stage: test
+  image: node:16.4.0-alpine
+  script:
+    - cd web
+    - yarn install
+    - yarn check-all
+  only:
+    changes:
+      - .gitlab-ci.yml
+      - web/**/*
+
+web:build:
+  stage: build
+  script:
+    - cd web
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker build --tag $CI_REGISTRY_IMAGE/web:latest .
+    - docker push $CI_REGISTRY_IMAGE/web:latest
+  only:
+    changes:
+      - .gitlab-ci.yml
+      - web/**/*
+
+web:deploy:
+  stage: deploy
+  script:
+    - cd web
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker pull $CI_REGISTRY_IMAGE/web:latest
+    - apk add --update --no-cache curl bash nodejs
+    - curl https://cli-assets.heroku.com/install.sh | sh
+    - heroku container:login
+    - docker tag $CI_REGISTRY_IMAGE/web:latest registry.heroku.com/social-network-404-web/web
+    - docker push registry.heroku.com/social-network-404-web/web
+    - heroku container:release web -a social-network-404-web
+  only:
+    changes:
+      - .gitlab-ci.yml
+      - web/**/*
